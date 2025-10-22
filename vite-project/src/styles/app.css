@@ -1,0 +1,26 @@
+:root{
+  --bg: #ffffff;
+  --text: #0f172a;
+  --footer-bg: #0b1220;
+  --footer-text: rgba(255,255,255,0.85);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root{
+    --bg: #071029;
+    --text: #e6eef8;
+    --footer-bg: #07101a;
+    --footer-text: rgba(255,255,255,0.9);
+  }
+}
+
+html,body,#root{ height:100%; }
+body{ background:var(--bg); color:var(--text); }
+
+.app-root{ display:flex; flex-direction:column; min-height:100vh; }
+.app-content{ flex:1 0 auto; }
+.app-footer{ flex-shrink:0; }
+
+/* Ensure footer links follow theme variables */
+.lp-footer{ background:var(--footer-bg); color:var(--footer-text); }
+.lp-hero__title{ color: var(--text); }
